@@ -5,6 +5,7 @@ from bot.instance import bot, dp
 from bot.routers import messages
 from config import DATABASE_URL
 from db.database import create_db_and_tables, init_engine
+import db.models  # noqa: F401 — registers Transaction with SQLModel.metadata
 
 logging.basicConfig(
     level=logging.INFO,
